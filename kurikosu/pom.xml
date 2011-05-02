@@ -4,7 +4,12 @@
 	<groupId>edu.levencloud.application</groupId>
 	<artifactId>lc-shared</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-
+	<developers>
+		<developer>
+			<name>Andre Lahs</name>
+			<email>andre.lahs.mail@googlemail.com</email>
+		</developer>
+	</developers>
 	<dependencies>
 		<!-- Test scope -->
 		<dependency>
