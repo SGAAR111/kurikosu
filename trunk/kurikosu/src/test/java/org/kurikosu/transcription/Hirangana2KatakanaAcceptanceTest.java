@@ -12,7 +12,7 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
 import org.junit.runners.Parameterized.Parameters;
-import org.kurikosu.lang.Hirangana;
+import org.kurikosu.lang.Hiragana;
 import org.kurikosu.lang.Katakana;
 
 /**
@@ -24,27 +24,33 @@ public class Hirangana2KatakanaAcceptanceTest {
 
 	private final Katakana katakana;
 	
-	private final Hirangana hirangana;
+	private final Hiragana hiragana;
 
 	/**
 	 * @param katakana
-	 * @param hirangana
+	 * @param hiragana
 	 */
-	public Hirangana2KatakanaAcceptanceTest(Hirangana hirangana, Katakana katakana) {
+	public Hirangana2KatakanaAcceptanceTest(Hiragana hiragana, Katakana katakana) {
 		this.katakana = katakana;
-		this.hirangana = hirangana;
+		this.hiragana = hiragana;
 	}
 
 	@Test
 	public void shouldTranscribeToKatakana() throws Exception {
-		assertEquals(katakana, new Hirangana2Katakana().transcribe(hirangana));
+		assertEquals(katakana, new Hiragana2Katakana().transcribe(hiragana));
 	}
 	
 	@Parameters
 	public static Collection<Object[]> data() {
 		
 		Object[][] params = new Object[][] {
-			new Object[] { new Hirangana(""), new Katakana("") }
+			new Object[] { new Hiragana("ぁ"), new Katakana("ァ") },
+			new Object[] { new Hiragana("きゃ"), new Katakana("キャ") },
+			new Object[] { new Hiragana("きゅ"), new Katakana("キュ") },
+			new Object[] { new Hiragana("きょ"), new Katakana("キョ") },
+			new Object[] { new Hiragana("びゃ"), new Katakana("ビャ") },
+			new Object[] { new Hiragana("ぴゅ"), new Katakana("ピュ") },
+			new Object[] { new Hiragana("じょ"), new Katakana("ジョ") }
 		};
 		
 		return Arrays.asList(params);

@@ -3,11 +3,11 @@ package org.kurikosu.lang;
 import java.io.Serializable;
 
 @SuppressWarnings("serial")
-public class Hirangana implements Serializable {
+public class Hiragana implements Serializable {
 
 	private String value;
 	
-	public Hirangana(String value) {
+	public Hiragana(String value) {
 		this.value = value;
 	}
 	
