@@ -31,9 +31,20 @@ public class Hiragana2Katakana {
 
 			final char hiraganaCharacter = hiraganaValue.charAt(index);
 
-			final char katakanaCharacter = (char) (((int) hiraganaCharacter) + HIRAGANA_KATAKANA_UNICODE_SHIFT);
+			if (hiraganaCharacter == 'ー') {
+				/* 
+				 * 'ー' might be used in hiragana also, even if long vowels 
+				 * usally created by appending the vowel itself 
+				 */
+				katakanaValue += hiraganaCharacter;
+				
+			} else {
 
-			katakanaValue += katakanaCharacter;
+				final char katakanaCharacter = (char) (((int) hiraganaCharacter) + HIRAGANA_KATAKANA_UNICODE_SHIFT);
+
+				katakanaValue += katakanaCharacter;
+				
+			}
 		}
 
 		return new Katakana(katakanaValue);

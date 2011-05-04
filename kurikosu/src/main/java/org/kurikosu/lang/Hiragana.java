@@ -29,6 +29,6 @@ public class Hiragana implements Serializable {
 	
 	@Override
 	public String toString() {
-		return "{ Hirangana : '" + this.getValue() + "' }";
+		return  this.getValue();
 	}
 }
