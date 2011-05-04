@@ -44,13 +44,19 @@ public class Hirangana2KatakanaAcceptanceTest {
 	public static Collection<Object[]> data() {
 		
 		Object[][] params = new Object[][] {
+			// -- Mono- and Digraphs
 			new Object[] { new Hiragana("ぁ"), new Katakana("ァ") },
 			new Object[] { new Hiragana("きゃ"), new Katakana("キャ") },
 			new Object[] { new Hiragana("きゅ"), new Katakana("キュ") },
 			new Object[] { new Hiragana("きょ"), new Katakana("キョ") },
 			new Object[] { new Hiragana("びゃ"), new Katakana("ビャ") },
 			new Object[] { new Hiragana("ぴゅ"), new Katakana("ピュ") },
-			new Object[] { new Hiragana("じょ"), new Katakana("ジョ") }
+			new Object[] { new Hiragana("じょ"), new Katakana("ジョ") },
+			// -- Entire Words
+			new Object[] { new Hiragana("てーぶる"), new Katakana("テーブル") },
+			new Object[] { new Hiragana("てーぶるくろーす"), new Katakana("テーブルクロース") },
+
+			new Object[] { new Hiragana("きっく"), new Katakana("キック") },	// Includes Germinate
 		};
 		
 		return Arrays.asList(params);
