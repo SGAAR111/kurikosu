@@ -19,11 +19,11 @@ public class Hiragana2Katakana {
 	 * done by shifting the unicode of each character by (6*16) positions to the
 	 * left.
 	 * 
-	 * @param hirangana
+	 * @param hiragana
 	 * @return
 	 */
-	public Katakana transcribe(Hiragana hirangana) {
-		final String hiraganaValue = hirangana.getValue();
+	public Katakana transcribe(Hiragana hiragana) {
+		final String hiraganaValue = hiragana.getValue();
 
 		String katakanaValue = "";
 
