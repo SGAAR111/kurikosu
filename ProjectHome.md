@@ -1,0 +1,1 @@
+Transcripting Japanese Words (Katakana, Hiragana, Romaji) to IPA
